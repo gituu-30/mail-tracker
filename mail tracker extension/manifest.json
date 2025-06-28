@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "MailTracker for Firefox",
+  "version": "1.0",
+  "description": "Tracks if your emails have been opened. Just like Mailtrack, but for Firefox.",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "*://mail.google.com/*",
+    "*://your-tracking-server.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
