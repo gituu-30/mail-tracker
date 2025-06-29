@@ -15,3 +15,6 @@ def track():
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
 
+user_agent = request.headers.get('User-Agent')
+print(f"[OPENED] Email ID: {email_id} at {time_opened} | UA: {user_agent}")
+sys.stdout.flush()
