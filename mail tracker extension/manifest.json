@@ -8,7 +8,8 @@
     "webRequestBlocking",
     "storage",
     "*://mail.google.com/*",
-    "*://your-tracking-server.com/*"
+    "*://mailtracker-r0nm.onrender.com/*"
+
   ],
   "background": {
     "scripts": ["background.js"]
