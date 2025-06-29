@@ -18,3 +18,7 @@ if __name__ == '__main__':
 user_agent = request.headers.get('User-Agent')
 print(f"[OPENED] Email ID: {email_id} at {time_opened} | UA: {user_agent}")
 sys.stdout.flush()
+@app.route('/')
+def home():
+    return "✅ MailTracker server is live."
+
