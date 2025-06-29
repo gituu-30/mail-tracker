@@ -1,8 +1,8 @@
 console.log("📩 MailTracker content script loaded");
 
 function injectPixelWhenComposeOpens(editor) {
-const pixelHTML = '<img src="https://mailtracker-r0nm.onrender.com/track?email_id=' + Date.now() + '" style="display:none;">';
-
+/*const pixelHTML = '<img src="https://mailtracker-r0nm.onrender.com/track?email_id=' + Date.now() + '" style="display:none;">';*/
+const pixelHTML = `<img src="https://mail-tracker-l9mq.onrender.com/track?email_id=${Date.now()}&rand=${Math.random()}" style="display:none;">`;
 
 
 
